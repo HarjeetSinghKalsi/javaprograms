@@ -1,6 +1,8 @@
 package basic_selenium;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Lauch_Google_Type_India {
@@ -10,8 +12,11 @@ public class Lauch_Google_Type_India {
 		ChromeDriver driver = new ChromeDriver();
 		driver.get("https://www.google.com");
 		driver.manage().window().maximize();
-		driver.findElement(By.name("q")).sendKeys("India");
-		//driver.findElement(By.name
+		WebElement e1 =driver.findElement(By.name("q"));
+		e1.sendKeys("India" + Keys.ENTER);
+		
+		
+	
 
 	}
 

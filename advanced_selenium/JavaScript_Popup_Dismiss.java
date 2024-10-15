@@ -1,16 +1,20 @@
-package basic_selenium;
+package advanced_selenium;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Absolute_Xpath_Locator {
+public class JavaScript_Popup_Dismiss {
 
-	public static void main(String[] args) 
-	{
-
+	public static void main(String[] args) throws InterruptedException {
+		
 		ChromeDriver driver = new ChromeDriver();
 		driver.get("file:///C:/Users/harje/Downloads/learning.html");
+		Thread.sleep(2000);
+		 
+		//to dismiss the javascript popup
+		driver.switchTo().alert().dismiss();
+		
 		driver.manage().window().maximize();
 		WebElement e1=	driver.findElement(By.xpath("(/html/body/input)[1]")); //username
         e1.sendKeys("harjeet@GTM");
@@ -34,7 +38,9 @@ public class Absolute_Xpath_Locator {
         e10.click(); 
         WebElement e11=	driver.findElement(By.xpath("(/html/body/a)")); //click on link
         e11.click();
-		
+        driver.close();
+	
+
 	}
 
 }

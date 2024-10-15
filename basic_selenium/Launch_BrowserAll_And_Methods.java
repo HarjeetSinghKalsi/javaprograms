@@ -18,13 +18,15 @@ public class Launch_BrowserAll_And_Methods
 		//InternetExplorerDriver driver4 = new InternetExplorerDriver();
 		
 		driver.get("https://www.facebook.com"); //provide url to open application
-		driver.manage().window().maximize();
+		driver.manage().window().maximize();   //maximize window
 	    String title =driver.getTitle();      //get the title of application
-		System.out.println(title);
-	  //driver.close();    //close the parent/current window/tab
-	    driver.quit();     //close both parent and child window/tab
+		System.out.println(title);           //get the title of website
+	  
 		System.out.println(driver.getWindowHandle()); //it will give the parent window id
-		System.out.println(driver.getWindowHandles()); ///it will give the parent/child window id	
+		System.out.println(driver.getWindowHandles()); ///it will give the parent/child window id
+		
+		 driver.close();    //close the parent/current window/tab
+		// driver.quit();     //close both parent and child window/tab
 		
 	    
 

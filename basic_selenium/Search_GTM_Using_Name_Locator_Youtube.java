@@ -12,6 +12,7 @@ public class Search_GTM_Using_Name_Locator_Youtube {
 		ChromeDriver driver=new ChromeDriver();
 		driver.get("https://www.youtube.com");
 		driver.manage().window().maximize();
+		
 		WebElement e1=driver.findElement(By.name("search_query"));
 		e1.sendKeys("grow tech minds");
 		WebElement e2=driver.findElement(By.name("search_query"));

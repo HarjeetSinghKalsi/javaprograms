@@ -12,6 +12,7 @@ public class Drop_Down_GTM {
 		ChromeDriver driver = new ChromeDriver();
 		 driver.get("https://grotechminds.com/registration/");
 		 driver.manage().window().maximize();
+		 
 		 WebElement e1 = driver.findElement(By.id("Skills"));
 		 e1.click();
 		 Select s1 = new Select(e1); 

@@ -11,11 +11,11 @@ public class Login_Flipkart {
 		ChromeDriver driver = new ChromeDriver();
 		driver.get("https://accounts.flipkart.com/?client=cemp-client&redirectURL=httpsmerchant.ekartlogistics.comcallbackappNamemerchant");
         driver.manage().window().maximize();
-       /* WebElement e1= driver.findElement(By	
+        WebElement e1= driver.findElement(By.xpath("(//label[.='Phone number / Email Id'])[1]"));
         e1.sendKeys("harjeet.kalsi007@gmail.com");
         WebElement e2=  driver.findElement(By.id("continue"));
         e2.click();
-*/
+
 	}
 
 }
